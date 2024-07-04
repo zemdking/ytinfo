@@ -71,7 +71,7 @@ def get_video_details():
 
     return jsonify(video_details)
 
-@app.route('/get_video_details', methods=['GET'])
+@app.route('/', methods=['GET'])
 def get_video():
     return 'hello youtube'
 if __name__ == '__main__':
