@@ -75,4 +75,4 @@ def get_video_details():
 def get_video():
     return 'hello youtube'
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0')
