@@ -28,7 +28,7 @@ def convert_to_ist(utc_time_str):
     ist_time = utc_time + timedelta(hours=5, minutes=30)
     return ist_time.strftime("%Y-%m-%d %H:%M:%S")
 
-@app.route('/get_video_details', methods=['GET'])
+@app.route('/api', methods=['GET'])
 def get_video_details():
     video_url = request.args.get('url')
     if not video_url:
@@ -71,6 +71,8 @@ def get_video_details():
 
     return jsonify(video_details)
 
-
+@app.route('/get_video_details', methods=['GET'])
+def get_video():
+    return 'hello youtube'
 if __name__ == '__main__':
     app.run()
