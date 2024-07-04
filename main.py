@@ -69,10 +69,11 @@ def get_video_details():
         published_at_utc = item['snippet']['publishedAt']
         item['snippet']['publishedAtIST'] = convert_to_ist(published_at_utc)
 
-    return jsonify(video_details)
+    return jsonify(video_details, indent=4)
 
 @app.route('/', methods=['GET'])
 def get_video():
     return 'hello youtube'
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
