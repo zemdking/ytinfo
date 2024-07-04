@@ -69,7 +69,7 @@ def get_video_details():
         published_at_utc = item['snippet']['publishedAt']
         item['snippet']['publishedAtIST'] = convert_to_ist(published_at_utc)
 
-    return jsonify(video_details, indent=4)
+    return jsonify(video_details)
 
 @app.route('/', methods=['GET'])
 def get_video():
