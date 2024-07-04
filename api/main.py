@@ -71,3 +71,6 @@ def get_video_details():
 
     return jsonify(video_details)
 
+
+if __name__ == '__main__':
+    app.run()
